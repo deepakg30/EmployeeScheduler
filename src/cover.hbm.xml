@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="com.jobplanner.model.Cover" table="t7_cover">
+        <id name="id" type="java.lang.Integer">
+            <column name="id" />
+            <generator class="assigned" />
+        </id>
+        <property name="division" type="java.lang.String">
+            <column name="division" />
+        </property>
+        <property name="dayofweek" type="java.lang.String">
+            <column name="dayofweek" />
+        </property>
+        <property name="shift" type="java.lang.String">
+            <column name="shift" />
+        </property>
+        <property name="preffered" type="java.lang.String">
+            <column name="preffered" />
+        </property>
+    </class>
+</hibernate-mapping>

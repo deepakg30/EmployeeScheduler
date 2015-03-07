@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="com.jobplanner.model.Constraint" table="t7_constraint">
+        <id name="id" type="java.lang.Integer">
+            <column name="id" />
+            <generator class="assigned" />
+        </id>
+        <property name="uid" type="java.lang.String">
+            <column name="uid" />
+        </property>
+        <property name="startdate" type="java.sql.Date">
+            <column name="startdate" />
+        </property>
+        <property name="enddate" type="java.sql.Date">
+            <column name="enddate" />
+        </property>
+    </class>
+</hibernate-mapping>

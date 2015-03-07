@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+   "-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+   "http://struts.apache.org/dtds/struts-2.3.dtd">
+
+<struts>
+	<package name="com.jobplanner" namespace="/" extends="struts-default,json-default">
+	<interceptors>
+            <interceptor name="logininterceptor"
+                class="com.jobplanner.interceptor.LoginInterceptor"></interceptor>
+            <interceptor-stack name="loginStack">
+                <interceptor-ref name="logininterceptor"></interceptor-ref>
+                <interceptor-ref name="defaultStack"></interceptor-ref>
+            </interceptor-stack>
+        </interceptors>
+      
+        <global-results>
+            <result name="login" type="redirect">login</result>
+        </global-results>
+	
+		<action name="login">
+			<result>Pages/login_new.jsp</result>
+		</action>
+		<action name="schedule" class="com.jobplanner.action.TestAction">
+			<result type="json">Pages/admin.jsp</result>
+		</action>
+		<action name="loginauth" class="com.jobplanner.action.UserLoginAction">
+		<result name="USER" type="redirectAction">
+			<param name="actionName">user</param>
+		</result>
+		<result name="ADMIN" type="redirectAction">
+			<param name="actionName">admin</param>
+		</result>
+		<result name="error">Pages/login_new.jsp</result>
+		</action>
+		<action name="user" >
+			<result>Pages/user.jsp</result>
+	   </action>
+	   <action name="admin" >
+			<result>Pages/admin.jsp</result>
+	   </action>
+	   <action name="userData" class="com.jobplanner.action.UserAction" method="userData">
+			<result type="json">Pages/user.jsp</result>
+		</action>
+		<action name="userDayOff" class="com.jobplanner.action.UserAction" method="dayOffList">
+			<result type="json">Pages/user.jsp</result>
+		</action>
+		<action name="userSchedules" class="com.jobplanner.action.UserAction" method="schedule">
+			<result type="json">Pages/user.jsp</result>
+		</action>
+	</package>
+	
+</struts>

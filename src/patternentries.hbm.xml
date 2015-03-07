@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="com.jobplanner.model.PatternEntries" table="t7_patternentry">
+        <id name="uid" type="java.lang.Integer">
+            <column name="uid" />
+            <generator class="assigned" />
+        </id>
+        <property name="id" type="java.lang.Integer">
+            <column name="id" />
+        </property>
+         <property name="index" type="java.lang.Integer">
+            <column name="index" />
+        </property>
+        <property name="shiftType" type="java.lang.String">
+            <column name="shifttype" />
+        </property>
+        <property name="day" type="java.lang.String">
+            <column name="day" />
+        </property>
+    </class>
+</hibernate-mapping>

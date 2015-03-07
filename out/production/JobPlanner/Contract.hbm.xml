@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="com.jobplanner.model.ContractModel" table="t7_Contract">
+        <id name="id" type="java.lang.Integer">
+            <column name="id" />
+            <generator class="assigned" />
+        </id>
+        <property name="description" type="java.lang.String">
+            <column name="description" />
+        </property>
+        <property name="shiftType" type="java.lang.String">
+            <column name="shifttype" />
+        </property>
+        <property name="singleAssignmentPerDay" type="java.lang.Boolean">
+            <column name="singleassignmentperday" />
+        </property>
+        <property name="singleAssignmentPerDay_weight" type="java.lang.Integer">
+            <column name="singleassignmentperday_weight" />
+        </property>
+        <property name="maxNumAssignments" type="java.lang.Integer">
+            <column name="maxnumassignments" />
+        </property>
+         <property name="maxNumAssignments_on" type="java.lang.Integer">
+            <column name="maxnumassignments_on" />
+        </property>
+         <property name="maxNumAssignments_weight" type="java.lang.Integer">
+            <column name="maxnumassignments_weight" />
+        </property>
+           <property name="minNumAssignments" type="java.lang.Integer">
+            <column name="minnumassignments" />
+        </property>
+         <property name="minNumAssignments_on" type="java.lang.Integer">
+            <column name="minnumassignments_on" />
+        </property>
+         <property name="minNumAssignments_weight" type="java.lang.Integer">
+            <column name="minnumassignments_weight" />
+        </property>
+         <property name="maxConsecutiveWorkingDays" type="java.lang.Integer">
+            <column name="maxconsecutiveworkingdays" />
+        </property>
+        <property name="maxConsecutiveWorkingDays_on" type="java.lang.Integer">
+            <column name="maxconsecutiveworkingdays_on" />
+        </property>
+        <property name="maxConsecutiveWorkingDays_weight" type="java.lang.Integer">
+            <column name="maxconsecutiveworkingdays_weight" />
+        </property>
+         <property name="minConsecutiveWorkingDays" type="java.lang.Integer">
+            <column name="minconsecutiveworkingdays" />
+        </property>
+            <property name="minConsecutiveWorkingDays_on" type="java.lang.Integer">
+            <column name="minconsecutiveworkingdays_on" />
+        </property>
+            <property name="minConsecutiveWorkingDays_weight" type="java.lang.Integer">
+            <column name="minconsecutiveworkingdays_weight" />
+        </property>
+        <property name="maxConsecutiveFreeDays" type="java.lang.Integer">
+            <column name="maxconsecutivefreedays" />
+        </property>
+        <property name="maxConsecutiveFreeDays_on" type="java.lang.Integer">
+            <column name="maxConsecutiveFreeDays_on" />
+        </property>
+        <property name="maxConsecutiveFreeDays_weight" type="java.lang.Integer">
+            <column name="maxConsecutiveFreeDays_weight" />
+        </property>
+        <property name="minConsecutiveFreeDays" type="java.lang.Integer">
+            <column name="minconsecutivefreedays" />
+        </property>
+         <property name="minConsecutiveFreeDays_on" type="java.lang.Integer">
+            <column name="minconsecutivefreedays_on" />
+        </property>
+         <property name="minConsecutiveFreeDays_weight" type="java.lang.Integer">
+            <column name="minconsecutivefreedays_weight" />
+        </property>
+         <property name="maxConsecutiveWorkingWeekends" type="java.lang.Integer">
+            <column name="maxconsecutiveworkingweekends" />
+        </property>
+        <property name="maxConsecutiveWorkingWeekends_on" type="java.lang.Integer">
+            <column name="maxconsecutiveworkingweekends_on" />
+        </property>
+        <property name="maxConsecutiveWorkingWeekends_weight" type="java.lang.Integer">
+            <column name="maxconsecutiveworkingweekends_weight" />
+        </property>
+         <property name="minConsecutiveWorkingWeekends" type="java.lang.Integer">
+            <column name="minconsecutiveworkingweekends" />
+        </property>
+        <property name="minConsecutiveWorkingWeekends_on" type="java.lang.Integer">
+            <column name="minconsecutiveworkingweekends_on" />
+        </property>
+        <property name="minConsecutiveWorkingWeekends_weight" type="java.lang.Integer">
+            <column name="minconsecutiveworkingweekends_weight" />
+        </property>
+         <property name="maxWorkingWeekendsInFourWeeks" type="java.lang.Integer">
+            <column name="maxworkingweekendsinfourweeks" />
+        </property>
+        <property name="maxWorkingWeekendsInFourWeeks_on" type="java.lang.Integer">
+            <column name="maxworkingweekendsinfourweeks_on" />
+        </property>
+        <property name="maxWorkingWeekendsInFourWeeks_weight" type="java.lang.Integer">
+            <column name="maxworkingweekendsinfourweeks_weight" />
+        </property>
+        <property name="weekendDefinition" type="java.lang.String">
+            <column name="weekenddefinition" />
+        </property>
+        <property name="completeWeekends" type="java.lang.Boolean">
+            <column name="completeweekends" />
+        </property>
+         <property name="identicalShiftTypesDuringWeekend" type="java.lang.Boolean">
+            <column name="identicalshifttypesduringweekend" />
+        </property>
+         <property name="noNightShiftBeforeFreeWeekend" type="java.lang.Boolean">
+            <column name="nonightshiftbeforefreeweekend" />
+        </property>
+         <property name="alternativeSkillCategory" type="java.lang.Boolean">
+            <column name="alternativeskillcategory" />
+        </property>
+        <property name="unwantedPatterns" type="java.lang.String">
+            <column name="unwantedpatterns" />
+        </property>
+    </class>
+</hibernate-mapping>
